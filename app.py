@@ -118,7 +118,7 @@ def main():
 	choice = st.sidebar.selectbox("Choose a Task", activity)
 
 	# Load file
-	df = pd.read_csv("https://github.com/Teemmii/Customer-Churn-App/blob/60abb745cd276236f9844c9399569892417aefcd/BankChurners3.csv")
+	df = pd.read_csv('https://github.com/Teemmii/Customer-Churn-App/blob/db6915649127600864423ceb0871c17d9b214808/BankChurners3.csv', header=None)
 	#EDA
 	if choice == 'EDA':
 		st.subheader("EDA Section")

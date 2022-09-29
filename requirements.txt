@@ -1,5 +1,4 @@
-streamlit==0.61.0
-pandas==0.25.3
+streamlit
 numpy==1.18.1
 scikit-learn==0.22.1
 httplib2==0.20.4
@@ -20,4 +19,3 @@ Send2Trash==1.8.0
 six==1.16.0
 sklearn==0.0
 smmap==5.0.0
-stats-arrays==0.6.5

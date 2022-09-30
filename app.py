@@ -113,7 +113,7 @@ def main():
 
 	""" salary predictor"""
 
-	st.title("Customer Churning")
+	st.title("Customer Churning Prediction App")
 	activity = ["EDA", "Prediction", "Metrics"]
 	choice = st.sidebar.selectbox("Choose a Task", activity)
 
@@ -139,7 +139,7 @@ def main():
 			st.write(df.describe())
         
         #Shape
-		if st.checkbox("show sahpe of Dataset"):
+		if st.checkbox("show shape of Dataset"):
 			st.write(df.shape)	
 			data_dim = st.radio("show Dimensions by", ("Rows", "Columns"))
 

@@ -114,7 +114,7 @@ def main():
 	""" salary predictor"""
 
 	st.title("Customer Churning Prediction App")
-	activity = ["EDA", "Prediction", "Metrics"]
+	activity = ["EDA", "Prediction", "Metrics", "About"]
 	choice = st.sidebar.selectbox("Choose a Task", activity)
 
 	# Load file
@@ -305,7 +305,37 @@ def main():
 
 		mdf = pd.read_sql_query("SELECT * FROM predictiontable", cnx)
 		st.dataframe(mdf)
+	
+	# ABOUT CHOICE
+	if choice == 'About':
+		st.subheader("About")
+		st.markdown("""
+			### Predicting if a customer will stop using thier Credit card
+			#### Built with Streamlit
+			
+			Data dictionary
+			
+			+ Customer_Age: Age in Years
+			+ Gender: Gender of account holder
+			+ Dependent_count: Number of dependents
+			+ Education_Level: Educational Qualification of the account holder
+			+ Marital_Status: Marital Status of account holder
+			+ Income_Category: Annual Income Category of the account holder
+			+ Card_Category: Type of Card
+			+ Total_Relationship_Count: Total no. of products held by the customer
+			+ Months_Inactive_12_mon: No. of months inactive in the last 12 months
+			+ Contacts_Count_12_mon: No. of Contacts in the last 12 months
+			+ Credit_Limit: Credit Limit on the Credit Card
+			+ Total_Revolving_Bal: Total Revolving Balance on the Credit Card
+			+ Total_Amt_Chng_Q4_Q1: Change in Transaction Amount (Q4 over Q1)
+			+ Total_Trans_Amt: Total Transaction Amount (Last 12 months)
+			+ Total_Ct_Chng_Q4_Q1: Change in Transaction Count (Q4 over Q1)
+			+ Avg_Utilization_Ratio: Average Card Utilization Ratio
+			### By
+			+ Temi Olorunfemi PhD.....Jesus saves
+			
 
+			""")
 	
 if __name__== '__main__':
 	main()
